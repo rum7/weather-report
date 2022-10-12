@@ -1,19 +1,38 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HOME START*/
+/* HOME END */
+
+/* CITY START */
+table {@apply 
+  mt-6 
+  w-full 
+  text-center 
+  bg-black bg-opacity-20 rounded-xl
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+thead tr {@apply border-b-[2px] border-potatoes text-[1rem]}
+th {@apply bg-black bg-opacity-50 font-normal}
+th:first-child{@apply py-4 rounded-tl-xl}
+th:last-child{@apply rounded-tr-xl}
 
-* {
-  box-sizing: border-box;
+tbody tr {@apply text-[.9rem]}
+td {@apply py-4}
+/* td:first-child{@apply py-4 rounded-bl-xl}
+td:last-child{@apply rounded-br-xl} */
+/* CITY END */
+
+/* CITYDAILY START */
+.timestamp {@apply
+  flex flex-col flex-wrap items-center
+  px-6 pt-[1.1rem] pb-2
+  text-center uppercase
+  bg-black bg-opacity-60 
+  border-r-[2px] border-potatoes rounded-l-xl
 }
+/* CITYDAILY END */
 
 @media (prefers-color-scheme: dark) {
   html {

@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'CervoNeue-Reg';
+    src: url(../assets/fonts/cervo-neue/CervoNeue-RegularNeue.otf) format('opentype');
+}
+@font-face {
+    font-family: 'CervoNeue-Regi';
+    src: url(../assets/fonts/cervo-neue/CervoNeue-RegularNeueItalic.otf) format('opentype');
+}
+@font-face {
+    font-family: 'CervoNeue-semibold';
+    src: url(../assets/fonts/cervo-neue/CervoNeue-SemiBoldNeue.otf) format('opentype');
+}
+body {
+    font-family: 'CervoNeue-Reg';
+    color: #edf5e0;
+    background: #f6d5df;
+}
+
+.b-shadow {
+    box-shadow:
+    0px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0px 12.5px 10px rgba(0, 0, 0, 0.035),
+    0px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    0px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.cn-reg {
+    font-family: 'CervoNeue-Reg';
+}
+.cn-semibo {
+    font-family: 'CervoNeue-semibold';
+}
+
+/* SEARCH FORM START */
+form input {
+    font-family: 'CervoNeue-Reg';
+    font-size: 1.575rem;
+}
+
+form input::placeholder {
+    font-family: 'CervoNeue-Regi';
+    opacity: 0.8;
+}
+/* SEARCH FORM END */
+
+/* CITYDAILY START */
+div.swiper-button-next,
+div.swiper-button-prev {
+    top: 1.75rem;
+    color: #00000080;
+    font-size: 1.5rem;
+}
+
+div.swiper-button-next::after,
+div.swiper-button-prev::after {
+    content: '';
+}
+/* CITYDAILY END */
+
+/* ANIMATION START */
+.animate-in {
+  animation-duration: 1s;
+  animation-name: animate-fade-in;
+  animation-delay: 0s;
+  animation-fill-mode: backwards;
+}
+@keyframes animate-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+    /* transform: translateY(0px); */
+    transition: opacity .5s ease, transform .5s ease 0s;
+    /* transition: opacity .5s ease, transform .5 ease 1s; */
+}
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .5s ease 0s, transform .5s ease;
+    /* transition: opacity .5s ease, transform .5 ease 1s; */
+}
+/* ANIMATION END */
