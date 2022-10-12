@@ -85,7 +85,7 @@ export default function Home() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
       </Head>
 
-      <main className="animate-in flex flex-wrap flex-col m-5 md:mx-auto md:my-5 md:w-[680px]">
+      <main className="animate-in flex flex-wrap flex-col m-5 mx-auto sm:my-5 w-[335px] sm:w-[560px]">
         <h2 className="mt-2 mb-5 text-7xl uppercase text-night-forest">Weather report</h2>
         <form 
           onSubmit={(event) => {{fetchWeatherCity(event)};{fetchWeatherCityDaily(event)}}} 

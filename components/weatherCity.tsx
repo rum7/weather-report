@@ -50,20 +50,20 @@ export default function WeatherCity({dataCity, fetching} : {dataCity: WeatherDat
         {dataCity.length === 0 ? (''):(
         dataCity.map((wd) => (
           <div key={wd.id} className="flex flex-row flex-wrap items-start">
-            <p className={`${fadeData.fade} w-full cn-semibo text-3xl md:text-4xl text-king-blue`}>{wd.name}, {wd.sys.country}</p>
+            <p className={`${fadeData.fade} w-full cn-semibo text-3xl sm:text-4xl text-king-blue`}>{wd.name}, {wd.sys.country}</p>
             <div className={`${fadeData.fade} flex justify-between w-full items-start`}>
-              <div className='flex flex-col md:flex-row mt-3 gap-x-6'>
-                <p className='text-5xl md:text-6xl mb-2'>{getCurrentTime(wd.timezone)}</p>
+              <div className='flex flex-col sm:flex-row mt-3 gap-x-6'>
+                <p className='text-5xl sm:text-6xl mb-2'>{getCurrentTime(wd.timezone)}</p>
                 <p className='cn-thin text-lg text-night-forest opacity-50'>
                   <span className='block'>{getCurrentDay(wd.timezone)}</span>
                   <span className=''>{wd.weather[0].description}</span>
                 </p>
               </div>
-              <div className='flex flex-wrap justify-end mt-3 gap-x-4 md:gap-x-6'>
+              <div className='flex flex-wrap justify-end mt-3 gap-x-4 sm:gap-x-6'>
                 <div>
-                  <h4 className='text-5xl md:text-6xl mb-2 md:mb-0'>{wd.main.temp.toFixed(0)}°c</h4>
+                  <h4 className='text-5xl sm:text-6xl mb-2 sm:mb-0'>{wd.main.temp.toFixed(0)}°c</h4>
                 </div>
-                <p className='relative w-[50px] h-[50px] md:w-[60px] md:h-[60px]'>
+                <p className='relative w-[50px] h-[50px] sm:w-[60px] sm:h-[60px]'>
                   <Image 
                     src={`/weatherIcons/${wd.weather[0].icon}@2x.png`} 
                     alt={`${wd.weather[0].icon}`}
