@@ -119,7 +119,7 @@ export default function WeatherCityDaily({dataCityDaily, fetching} : {dataCityDa
   }
 
   return (
-    <div className='mt-8 px-3 py-3 w-[390px] md:w-[680px] lg:w-[720px]'>
+    <div className='mt-8 px-3 py-3 w-[350px] md:w-[680px] lg:w-[720px]'>
       <div className='flex flex-nowrap justify-between'>
         <ul className='timestamp'>
           <li className='text-2xl mb-[2rem]'><TbCalendarTime /></li>

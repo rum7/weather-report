@@ -59,7 +59,7 @@ export default function WeatherCity({dataCity, fetching} : {dataCity: WeatherDat
                   <span className=''>{wd.weather[0].description}</span>
                 </p>
               </div>
-              <div className='flex flex-wrap justify-end mt-3 gap-x-6'>
+              <div className='flex flex-wrap justify-end mt-3 gap-x-4 md:gap-x-6'>
                 <div>
                   <h4 className='text-6xl mb-2 md:mb-0'>{wd.main.temp.toFixed(0)}°c</h4>
                 </div>
