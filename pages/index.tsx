@@ -49,7 +49,7 @@ export default function Home() {
     }
     setTimeout(() => {
       setLoading(false)
-    }, 500);
+    }, 1000);
   };
 
   const fetchWeatherCityDaily = async (event: React.FormEvent<HTMLFormElement>) => {

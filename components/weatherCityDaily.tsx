@@ -104,14 +104,8 @@ export default function WeatherCityDaily({dataCityDaily, fetching} : {dataCityDa
   useEffect(() => {
     if(fetching === true) {
       setFadeData({fade: 'fade-out'})
-      console.log("fetching")
-      console.log(fetching)
-      console.log("--------")
     }else {
       setFadeData({fade: 'fade-in'})
-      console.log("fetching")
-      console.log(fetching)
-      console.log("--------")
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetching])
