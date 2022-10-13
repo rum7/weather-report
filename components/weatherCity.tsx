@@ -3,7 +3,7 @@ import React, { useEffect, useState} from 'react'
 import { WeatherData } from '../types/types'
 
 export default function WeatherCity({dataCity, fetching} : {dataCity: WeatherData[], fetching:boolean}) {
-  const [fadeData, setFadeData] = useState({fade: ''})
+  const [fadeData, setFadeData] = useState({fade: 'fade-start'})
 
   //Getting the date in the UTC timezone, depending on the city
   const getCurrentDay = (currentTimezone: number) => {
@@ -36,10 +36,16 @@ export default function WeatherCity({dataCity, fetching} : {dataCity: WeatherDat
 
   //Manage the fade in/out between fetching new data
   useEffect(() => {
-    if(fetching === true) {
-      setFadeData({fade: 'fade-out'})
+    if (fadeData.fade === 'fade-start') {
+      setTimeout(() => {
+        setFadeData({fade: 'fade-in'})
+      }, 500)
     }else {
-      setFadeData({fade: 'fade-in'})
+      if (fetching === true) {
+        setFadeData({fade: 'fade-out'})
+      }else {
+        setFadeData({fade: 'fade-in'})
+      }
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetching])

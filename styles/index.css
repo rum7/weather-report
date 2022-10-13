@@ -61,7 +61,7 @@ div.swiper-button-prev::after {
 
 /* ANIMATION START */
 .animate-in {
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-name: animate-fade-in;
   animation-delay: 0s;
   animation-fill-mode: backwards;
@@ -70,16 +70,16 @@ div.swiper-button-prev::after {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
+.fade-start {
+    opacity: 0;
+    transform: translateY(20px);
+}
 .fade-in {
-    /* transform: translateY(0px); */
     transition: opacity .5s ease, transform .5s ease 0s;
-    /* transition: opacity .5s ease, transform .5 ease 1s; */
 }
 .fade-out {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity .5s ease 0s, transform .5s ease;
-    /* transition: opacity .5s ease, transform .5 ease 1s; */
 }
 /* ANIMATION END */

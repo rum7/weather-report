@@ -43,10 +43,6 @@ export default function Home() {
       return { notFound: true };
     }
 
-    const clrInputSearch = document.querySelector<HTMLInputElement>("#searchCity")
-    if(clrInputSearch != null) {
-      // clrInputSearch.value = ''
-    }
     setTimeout(() => {
       setLoading(false)
     }, 1000);

@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import { TbCalendarTime } from "react-icons/tb"
 
 export default function WeatherCityDaily({dataCityDaily, fetching} : {dataCityDaily: WeatherDataDaily[], fetching:boolean}) {
-  const [fadeData, setFadeData] = useState({fade: ''})
+  const [fadeData, setFadeData] = useState({fade: 'fade-start'})
 
   const [weatherCDF, setWeatherCDF] = useState<WeatherDataDList[][]>([]);
   let weatherCD: (WeatherDataDList)[][] = [];
@@ -85,7 +85,7 @@ export default function WeatherCityDaily({dataCityDaily, fetching} : {dataCityDa
     })
   }
 
-  //Reload data based on new dataCityDaily's data we get
+  //Load data based on new dataCityDaily's data we get
   //Also reseting variables
   //Setting up our left and right nav button
   useEffect(() => {
@@ -102,10 +102,16 @@ export default function WeatherCityDaily({dataCityDaily, fetching} : {dataCityDa
 
   //Manage the fade in/out between fetching new data
   useEffect(() => {
-    if(fetching === true) {
-      setFadeData({fade: 'fade-out'})
+    if (fadeData.fade === 'fade-start') {
+      setTimeout(() => {
+        setFadeData({fade: 'fade-in'})
+      }, 500)
     }else {
-      setFadeData({fade: 'fade-in'})
+      if (fetching === true) {
+        setFadeData({fade: 'fade-out'})
+      }else {
+        setFadeData({fade: 'fade-in'})
+      }
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetching])
